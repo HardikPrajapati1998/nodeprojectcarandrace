@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "0bba5f1f-8571-4982-a0d7-5a57bc0b3726",
+		"name": "Track API Collection",
+		"description": "API endpoints to manage tracks related to teams.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36544416"
+	},
+	"item": [
+		{
+			"name": "Get All Tracks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/track",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Track by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/track/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"track",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Track",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Monaco\", \"type\": \"street\", \"laps\": 84, \"baseLapTime\": 72.909}"
+				},
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/track",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Track by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/track/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"track",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRacesByTrackId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/track/1/races",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"track",
+						"1",
+						"races"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a new race associated with the specified track ID.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/track/1/races",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"track",
+						"1",
+						"races"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

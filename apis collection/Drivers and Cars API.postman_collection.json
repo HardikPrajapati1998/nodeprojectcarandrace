@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "60cd31a5-e08e-4a49-aed0-2fd9989761d7",
+		"name": "Drivers and Cars API",
+		"description": "Postman collection for managing Drivers and Cars for different teams.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36544416"
+	},
+	"item": [
+		{
+			"name": "Drivers",
+			"item": [
+				{
+					"name": "Get All Drivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/drivers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"drivers"
+							]
+						},
+						"description": "Retrieve all drivers for a specific team."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Driver",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 1, \"name\": \"John Doe\", \"short_name\": \"JD\", \"skill_race\": 90, \"skill_street\": 85}"
+						},
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/drivers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"drivers"
+							]
+						},
+						"description": "Add a new driver to the specified team."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Driver",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"John Smith\", \"short_name\": \"JSk\", \"skill_race\": 92, \"skill_street\": 87}"
+						},
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/drivers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"drivers",
+								"1"
+							]
+						},
+						"description": "Update a driver's details."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Driver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/drivers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"drivers",
+								"1"
+							]
+						},
+						"description": "Delete a driver by their number."
+					},
+					"response": []
+				},
+				{
+					"name": "Get single Driver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/drivers/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"drivers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "Get All Cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/cars",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"cars"
+							]
+						},
+						"description": "Retrieve all cars for a specific team."
+					},
+					"response": []
+				},
+				{
+					"name": "Get single Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/car/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"car",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Car",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"driver_number\": \"\", \"suitability_race\": 85, \"suitability_street\": 90, \"reliability\": 95}"
+						},
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/car",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"car"
+							]
+						},
+						"description": "Add a new car to the specified team."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Car",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"suitability_race\": 85, \"suitability_street\": 93, \"reliability\": 97}"
+						},
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/car/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"car",
+								"4"
+							]
+						},
+						"description": "Update a car's details."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/car/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"car",
+								"1"
+							]
+						},
+						"description": "Delete a car by its ID."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Driver Associated with Car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teams-api/:team_short_name/car/:id/driver",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								":team_short_name",
+								"car",
+								":id",
+								"driver"
+							],
+							"variable": [
+								{
+									"key": "team_short_name",
+									"value": ""
+								},
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Driver Associated with Car",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"driver_number\": 1\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/car/3/driver",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"car",
+								"3",
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Driver Associated with Car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/teams-api/kit214/car/1/driver",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"car",
+								"1",
+								"driver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "car/:id/lap",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/teams-api/kit214/car/4/lap?trackType=street&baseLapTime=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"teams-api",
+								"kit214",
+								"car",
+								"4",
+								"lap"
+							],
+							"query": [
+								{
+									"key": "trackType",
+									"value": "street"
+								},
+								{
+									"key": "baseLapTime",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

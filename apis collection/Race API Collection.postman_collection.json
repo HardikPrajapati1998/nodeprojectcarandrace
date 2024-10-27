@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "37a05f7a-5b02-4a15-ae6e-788b788bc082",
+		"name": "Race API Collection",
+		"description": "A collection for all Race-related API operations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36544416"
+	},
+	"item": [
+		{
+			"name": "Create a Track",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Australia\",\n    \"uri\": \"localhost:3000/timing-api/kit214/track/4\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/track",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Race",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/track/4/races",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"track",
+						"4",
+						"races"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Races",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Race by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get race/lap",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race/4/lap",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race",
+						"4",
+						"lap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get race/lap Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race/4/lap",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race",
+						"4",
+						"lap"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Car to Race",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"uri\": \"localhost:3000/teams-api/kit214/car/2\"\n}\n"
+				},
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race/4/entrant",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race",
+						"4",
+						"entrant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Car from Race",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"carUri\": \"https://utasbot.dev/kit214/teams-api/car/2\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race/2/entrant",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race",
+						"2",
+						"entrant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Qualify Race",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race/4/qualify",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race",
+						"4",
+						"qualify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/race/:id/lap/:numbe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race/4/lap/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race",
+						"4",
+						"lap",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/timing-api/kit214/race/4/leaderboard",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"timing-api",
+						"kit214",
+						"race",
+						"4",
+						"leaderboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
